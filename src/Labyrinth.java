@@ -40,13 +40,12 @@ public class Labyrinth implements ILabyrinth {
 
         List<Feld> lFelder;
         Feld feld;
-        int localCharCounterToTop, localCharCounterToMid, localCharCounterToBot;
+        int localCharCounterToTop, localCharCounterToMid;
         int charStart;
         for (int x=0; x < this.spielFeld.size(); x++) {
             lFelder = this.spielFeld.get(x);
             localCharCounterToTop = 0;
             localCharCounterToMid = 0;
-            localCharCounterToBot = 0;
             for (Feld value : lFelder) {
                 feld = value;
                 charStart = outputString.length()-localCharCounterToTop;
@@ -86,7 +85,7 @@ public class Labyrinth implements ILabyrinth {
                     localCharCounterToTop++;
                     localCharCounterToMid++;
                 }
-                charStart = outputString.length()-localCharCounterToBot;
+                charStart = outputString.length();
                 // potentielle Wand unten: ###
                 if (feld.hatWandU()) {
                     outputString.insert(charStart, "###");
