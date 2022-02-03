@@ -47,15 +47,13 @@ public class Labyrinth implements ILabyrinth {
         StringBuilder outputString = new StringBuilder();
 
         List<Feld> lFelder;
-        Feld feld;
         int localCharCounterToTop, localCharCounterToMid;
         int charStart;
         for (int x=0; x < this.spielFeld.size(); x++) {
             lFelder = this.spielFeld.get(x);
             localCharCounterToTop = 0;
             localCharCounterToMid = 0;
-            for (Feld value : lFelder) {
-                feld = value;
+            for (Feld feld : lFelder) {
                 charStart = outputString.length()-localCharCounterToTop;
                 // potentielle Wand oben: ###
                 if (feld.hatWandO()) {

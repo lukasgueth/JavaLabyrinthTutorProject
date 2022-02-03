@@ -1,4 +1,12 @@
-public interface IFeld {
+public interface IFeld extends Comparable<Feld> {
+
+    /**
+     * Vergleicht das aktuelle Feld mit einem anderen Feld, basierend auf den X- und Y-Koordinaten des Feldes.
+     * Sind die Koordinaten gleich, gibt die Methode 0 zurück, wenn die Y-Koordinaten kleiner sind, -1, sonst 1.
+     * @param feld Das zu vergleichende Feld.
+     */
+    @Override
+    int compareTo(Feld feld);
 
     /**
      * Setzt die aktuelle X-Koordinate des Feldes.

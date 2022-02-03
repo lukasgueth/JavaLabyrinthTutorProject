@@ -16,6 +16,14 @@ public class Feld implements IFeld {
     }
 
     @Override
+    public int compareTo(Feld feld) {
+        if (this.posY.equals(feld.getPosY()) && this.posX.equals(feld.getPosX()))
+            return 0;
+        if (this.posY < feld.getPosY()) return -1;
+        return 1;
+    }
+
+    @Override
     public void setPosX(Integer x) {
         posX = x;
     }
