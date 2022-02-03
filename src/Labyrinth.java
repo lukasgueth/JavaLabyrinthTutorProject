@@ -5,8 +5,16 @@ import java.util.List;
 public class Labyrinth implements ILabyrinth {
     private final HashMap<Integer, List<Feld>> spielFeld;
 
+    private Feld zielFeld;
+
     public Labyrinth() {
         this.spielFeld = new HashMap<>();
+        this.zielFeld = null;
+    }
+
+    @Override
+    public void setZielFeld(Feld feld) {
+        this.zielFeld = feld;
     }
 
     @Override

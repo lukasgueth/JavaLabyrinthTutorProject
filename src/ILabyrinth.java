@@ -1,6 +1,12 @@
 public interface ILabyrinth {
 
     /**
+     * Setzt das Zielfeld
+     * @param feld Das zu erreichende Feld
+     */
+    void setZielFeld(Feld feld);
+
+    /**
      * Fügt dem gesamten Spielfeld ein Feld hinzu. Sortiert das Feld nach gleichen Y- und jeweiligen aufsteigenden X-Koordinaten.
      * Fügt das Feld nur ein, wenn kleiner als die Anzahl der belegten Reihen ist (nicht "echt kleiner").
      * Setzt nach Einfügen die neue Y-Koordinate des Feldes.
